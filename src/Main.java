@@ -69,38 +69,38 @@ class OrderedRowsMatrix extends Matrix {
     }
 }
 
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Введите количество строк матрицы A:");
-        int rowsA = scanner.nextInt();
-        System.out.println("Введите количество столбцов матрицы A:");
-        int colsA = scanner.nextInt();
-        OrderedRowsMatrix matrixA = new OrderedRowsMatrix(rowsA, colsA);
-        System.out.println("Введите элементы матрицы A:");
-        matrixA.readMatrix();
-
-        System.out.println("Введите количество строк матрицы B:");
-        int rowsB = scanner.nextInt();
-        System.out.println("Введите количество столбцов матрицы B:");
-        int colsB = scanner.nextInt();
-        OrderedRowsMatrix matrixB = new OrderedRowsMatrix(rowsB, colsB);
-        System.out.println("Введите элементы матрицы B:");
-        matrixB.readMatrix();
-
-        int negativeCountA = matrixA.countNegative();
-        int negativeCountB = matrixB.countNegative();
-
-        OrderedRowsMatrix targetMatrix;
-        if (negativeCountA > negativeCountB) {
-            targetMatrix = matrixA;
-        } else {
-            targetMatrix = matrixB;
-        }
-
-        int orderedRowsCount = targetMatrix.countOrderedRows();
-        System.out.println("Количество строк с упорядоченными по возрастанию элементами: " + orderedRowsCount);
-    }
-}
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("Введите количество строк матрицы A:");
+//        int rowsA = scanner.nextInt();
+//        System.out.println("Введите количество столбцов матрицы A:");
+//        int colsA = scanner.nextInt();
+//        OrderedRowsMatrix matrixA = new OrderedRowsMatrix(rowsA, colsA);
+//        System.out.println("Введите элементы матрицы A:");
+//        matrixA.readMatrix();
+//
+//        System.out.println("Введите количество строк матрицы B:");
+//        int rowsB = scanner.nextInt();
+//        System.out.println("Введите количество столбцов матрицы B:");
+//        int colsB = scanner.nextInt();
+//        OrderedRowsMatrix matrixB = new OrderedRowsMatrix(rowsB, colsB);
+//        System.out.println("Введите элементы матрицы B:");
+//        matrixB.readMatrix();
+//
+//        int negativeCountA = matrixA.countNegative();
+//        int negativeCountB = matrixB.countNegative();
+//
+//        OrderedRowsMatrix targetMatrix;
+//        if (negativeCountA > negativeCountB) {
+//            targetMatrix = matrixA;
+//        } else {
+//            targetMatrix = matrixB;
+//        }
+//
+//        int orderedRowsCount = targetMatrix.countOrderedRows();
+//        System.out.println("Количество строк с упорядоченными по возрастанию элементами: " + orderedRowsCount);
+//    }
+//}
