@@ -1,73 +1,73 @@
-import java.util.Scanner;
-import java.lang.Math;
-
-
-class Matrix {
-    protected int[][] matrix;
-    protected int rows;
-    protected int cols;
-
-
-    public Matrix(int rows, int cols) {
-        this.rows = rows;
-        this.cols = cols;
-        this.matrix = new int[rows][cols];
-    }
-
-
-    public void readMatrix() {
-        Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                matrix[i][j] = scanner.nextInt();
-            }
-        }
-    }
-
-
-    public int countNegative() {
-        int count = 0;
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                if (f(matrix[i][j]) < 0) {
-                    count++;
-                }
-            }
-        }
-        return count;
-    }
-
-
-    protected double f(int x) {
-        return Math.sin(x);
-    }
-}
-
-
-class OrderedRowsMatrix extends Matrix {
-
-    public OrderedRowsMatrix(int rows, int cols) {
-        super(rows, cols);
-    }
-
-
-    public int countOrderedRows() {
-        int count = 0;
-        for (int i = 0; i < rows; i++) {
-            boolean isOrdered = true;
-            for (int j = 1; j < cols; j++) {
-                if (matrix[i][j] < matrix[i][j - 1]) {
-                    isOrdered = false;
-                    break;
-                }
-            }
-            if (isOrdered) {
-                count++;
-            }
-        }
-        return count;
-    }
-}
+//import java.util.Scanner;
+//import java.lang.Math;
+//
+//
+//class Matrix {
+//    protected int[][] matrix;
+//    protected int rows;
+//    protected int cols;
+//
+//
+//    public Matrix(int rows, int cols) {
+//        this.rows = rows;
+//        this.cols = cols;
+//        this.matrix = new int[rows][cols];
+//    }
+//
+//
+//    public void readMatrix() {
+//        Scanner scanner = new Scanner(System.in);
+//        for (int i = 0; i < rows; i++) {
+//            for (int j = 0; j < cols; j++) {
+//                matrix[i][j] = scanner.nextInt();
+//            }
+//        }
+//    }
+//
+//
+//    public int countNegative() {
+//        int count = 0;
+//        for (int i = 0; i < rows; i++) {
+//            for (int j = 0; j < cols; j++) {
+//                if (f(matrix[i][j]) < 0) {
+//                    count++;
+//                }
+//            }
+//        }
+//        return count;
+//    }
+//
+//
+//    protected double f(int x) {
+//        return Math.sin(x);
+//    }
+//}
+//
+//
+//class OrderedRowsMatrix extends Matrix {
+//
+//    public OrderedRowsMatrix(int rows, int cols) {
+//        super(rows, cols);
+//    }
+//
+//
+//    public int countOrderedRows() {
+//        int count = 0;
+//        for (int i = 0; i < rows; i++) {
+//            boolean isOrdered = true;
+//            for (int j = 1; j < cols; j++) {
+//                if (matrix[i][j] < matrix[i][j - 1]) {
+//                    isOrdered = false;
+//                    break;
+//                }
+//            }
+//            if (isOrdered) {
+//                count++;
+//            }
+//        }
+//        return count;
+//    }
+//}
 
 //
 //public class Main {
