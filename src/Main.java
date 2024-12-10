@@ -17,7 +17,7 @@ class Matrix {
 
     public void readMatrix() {
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < rows; i++) {
+        for (int i = 1; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 matrix[i][j] = scanner.nextInt();
             }
