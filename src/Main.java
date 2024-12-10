@@ -24,7 +24,7 @@ class Matrix {
         }
     }
 
-    // Метод для вычисления количества отрицательных значений f(xij)
+
     public int countNegative() {
         int count = 0;
         for (int i = 0; i < rows; i++) {
@@ -43,14 +43,14 @@ class Matrix {
     }
 }
 
-// Класс для подсчета строк с упорядоченными по возрастанию элементами
+
 class OrderedRowsMatrix extends Matrix {
 
     public OrderedRowsMatrix(int rows, int cols) {
         super(rows, cols);
     }
 
-    // Метод для подсчета строк, элементы которых упорядочены по возрастанию
+
     public int countOrderedRows() {
         int count = 0;
         for (int i = 0; i < rows; i++) {
@@ -69,7 +69,7 @@ class OrderedRowsMatrix extends Matrix {
     }
 }
 
-// Основной класс для демонстрации работы
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
